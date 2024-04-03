@@ -1,0 +1,35 @@
+package hell;
+
+import java.util.Scanner;
+
+public class Xylem {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int c=n/10;
+        int rev=0;
+        while(c>0)
+        {
+            rev=rev*10+c%10;
+            c=c/10;
+        }
+        int f=rev/10;
+        int sum=0;
+        while(f>0)
+        {
+            sum=sum+f%10;
+            f=f/10;
+        }
+        int i=rev%10+n%10;
+        if(sum==i)
+        {
+            System.out.println("xylem number");
+        }
+        else
+        {
+            System.out.println("phloem number");
+        }
+    }
+    
+}
